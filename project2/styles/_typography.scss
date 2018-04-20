@@ -1,0 +1,9 @@
+$primaryFont: 'Montserrat', sans-serif;
+$secondaryFont: 'Roboto', sans-serif;
+
+
+@mixin fontSize($sizeValue) {
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+

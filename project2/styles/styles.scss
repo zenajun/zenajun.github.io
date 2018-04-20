@@ -1,0 +1,61 @@
+@import 'setup';
+@import 'utils';
+@import 'typography';
+@import 'components/header';
+@import 'components/footer';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    @include fontSize(16);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.hero-header {
+    padding: 10px;
+    &__header-container {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        &__header-primary {
+            // text-align: center;
+            color: $primaryColour;
+            @include fontSize(35);
+            order: 2;        }
+        &__header-2 {
+            order: 1;
+        }
+        &__header-3 {
+            order: 0;
+            color: $primaryColour;
+            font-family: $primaryFont;
+            @include fontSize(16);
+            font-weight: 400;
+        }
+        &__header-3::after {
+            content: '';
+            width: 33px;
+            height: 1px;
+            position: absolute;
+            background: lighten($color: $primaryColour, $amount: 42);
+            top: 45px;
+            left: 0;
+        }
+        &__header-4 {
+            order: 3;
+        }
+        &__link {
+            order: 4;
+        }
+        &__icon {
+            order: 5;
+            display: none;
+        }
+    }
+}
